@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.banner-container {
+  padding-block: 80px;
+  margin-inline: 4%;
+}
+
+.banner-section {
+  border: 1px solid white;
+  padding: 40px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.banner-section .banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(https://ledger-wp-website-s3-prd.ledger.com/uploads/2024/10/strong_banner_visual-scaled.webp);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.banner-section:hover .banner-bg {
+  transform: scale(1.05);
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  z-index: -1;
+}
+
+.banner-section h2 {
+  font-size: 38px;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.banner-section p {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 24px;
+}
+
+.banner-section a {
+  padding: 14px 12px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  backdrop-filter: blur(0);
+  width: fit-content;
+}
+
+.video-section {
+  margin-inline: 4%;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-block: 80px;
+}
+
+.video-container {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 576px;
+}
+
+.text-container {
+  width: 100%;
+}
+
+.text-container p {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -2.25px;
+}
+
+.text-container p em {
+  color: #d4a0ff;
+  font-style: normal;
+  display: inline-block;
+}
+
+.text-container p span {
+  display: inline-block;
+  margin-bottom: -8px;
+}
+
+.text-container p span svg {
+  display: block;
+  /* vertical-align: middle; */
+}
+
+@media screen and (max-width: 540px) {
+  .banner-section {
+    padding: 24px;
+  }
+
+  .banner-section .banner-bg {
+    background-position: 70%;
+  }
+
+  .banner-section h2 {
+    font-size: 24px;
+  }
+
+  .banner-section p {
+    font-size: 20px;
+  }
+
+  .video-section {
+    gap: 32px;
+  }
+
+  .text-container p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .text-container p span svg {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .video-section {
+    flex-direction: column-reverse;
+  }
+}
